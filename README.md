@@ -6,8 +6,9 @@ ObsidianでMTGのカードを日本語名、英語名どちらでもリスト表
 
 # 使い方
 ## デッキリストを作る
-
 ### 書き方
+![image](https://github.com/user-attachments/assets/6aeb81a7-4c1a-4148-a894-456057fa42d7)<br>
+
 \``` mtg-list <br>
 デッキリスト: <br>
 1 ラノワールのエルフ <br>
@@ -35,5 +36,21 @@ ObsidianでMTGのカードを日本語名、英語名どちらでもリスト表
 枚数+半角スペース+カード名(日本語、英語名のどちらか)でカードが追加されます。
 
 ## 単体or複数枚カードを並べる
+### 書き方
+![image](https://github.com/user-attachments/assets/1f9ae604-801b-4bba-acf0-4a8470eaa8fd)
+
+\```mtg-card <br>
+\タッサの神託者 <br>
+\Demonic Consultation <br>
+\``` <br>
+
+### カードを並べるためのコードブロック
+\```mtg-card <br>
+\``` <br>
+で囲った場所にカードを並べれます。
+
+### カードの追加方法
+タッサの神託者 <br>
+カード名(日本語、英語名のどちらか)を書くだけです。
 
 # 不具合
