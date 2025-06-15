@@ -1,0 +1,33 @@
+.magic-card-container {
+    max-height: 700px;       /* スクロールエリアの高さ */
+    overflow-y: auto;        /* 全体スクロール */
+    padding-right: 12px;
+    box-sizing: border-box;
+}
+
+.magic-card-grid {
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    gap: 8px;
+    margin-bottom: 1em;
+
+    overflow: unset;
+    max-height: unset;
+}
+
+.magic-card-item {
+    position: relative;
+    transition: transform 0.2s ease;
+}
+
+.magic-card-count {
+    position: absolute;
+    top: 4px;
+    left: 4px;
+    background: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 2px 6px;
+    font-size: 0.75em;
+    border-radius: 4px;
+    z-index: 5;
+}

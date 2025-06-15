@@ -1,0 +1,10 @@
+{
+    "id": "magic-list-plugin",
+    "name": "Magic List Plugin",
+    "version": "1.0.0",
+    "minAppVersion": "0.15.0",
+    "author": "ayaha401",
+    "description": "Magic: The Gathering のカードリストを表示するプラグイン",
+    "main": "main.js",
+    "isDesktopOnly": false
+}
