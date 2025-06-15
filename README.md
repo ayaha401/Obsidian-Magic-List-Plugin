@@ -1,6 +1,11 @@
 # Obsidian-Magic-List-Plugin
 ObsidianでMTGのカードを日本語名、英語名どちらでもリスト表示できるプラグイン
 
+![image](https://github.com/user-attachments/assets/69410e7f-e9bf-4218-89e3-fa5a19319ba5)
+
+![image](https://github.com/user-attachments/assets/3562c98d-d25f-4f22-847f-26fdea69159f)
+
+
 # 導入方法
 `.obsidian` > `plugins` > `magic-list-plugin` の中に`main.js` `manifest.json` `styles.css`を入れる
 
