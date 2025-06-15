@@ -45,8 +45,8 @@ ObsidianでMTGのカードを日本語名、英語名どちらでもリスト表
 ![image](https://github.com/user-attachments/assets/1f9ae604-801b-4bba-acf0-4a8470eaa8fd)
 
 \```mtg-card <br>
-\タッサの神託者 <br>
-\Demonic Consultation <br>
+タッサの神託者 <br>
+Demonic Consultation <br>
 \``` <br>
 
 ### カードを並べるためのコードブロック
