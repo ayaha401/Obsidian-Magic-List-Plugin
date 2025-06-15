@@ -2,7 +2,7 @@
 ObsidianでMTGのカードを日本語名、英語名どちらでもリスト表示できるプラグイン
 
 # 導入方法
-`.obsidian` > `plugins`の中に`main.js` `manifest.json` `styles.css`を入れる
+`.obsidian` > `plugins` > `magic-list-plugin` の中に`main.js` `manifest.json` `styles.css`を入れる
 
 # 使い方
 ## デッキリストを作る
