@@ -9,6 +9,9 @@ ObsidianでMTGのカードを日本語名、英語名どちらでもリスト表
 # 導入方法
 `.obsidian` > `plugins` > `magic-list-plugin` の中に`main.js` `manifest.json` `styles.css`を入れる
 
+# 注意事項
+JSの書き方はわからないですがChatGPTを活用して作ったプラグインです。
+
 # 使い方
 ## デッキリストを作る
 ### 書き方
