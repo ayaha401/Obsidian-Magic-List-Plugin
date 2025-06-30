@@ -123,20 +123,32 @@ module.exports = class MagicListPlugin extends Plugin {
 
 // カードを探す
 async function fetchCardImage(name) {
-    // 日本語カードを優先取得
-    const resJa = await fetch(`https://api.scryfall.com/cards/named?fuzzy=${encodeURIComponent(name)}&lang=ja`);
-    if (resJa.ok) {
-        const data = await resJa.json();
-        if (data.image_uris?.normal) {
-            return data.image_uris.normal;
-        }
+    // 日本語を優先してカード情報を取得
+    let res = await fetch(`https://api.scryfall.com/cards/named?fuzzy=${encodeURIComponent(name)}&lang=ja`);
+    if (!res.ok) {
+        // 日本語カードが見つからなければ英語で再取得
+        res = await fetch(`https://api.scryfall.com/cards/named?fuzzy=${encodeURIComponent(name)}&lang=en`);
     }
 
-    // 日本語がなければ英語カードを取得
-    const resEn = await fetch(`https://api.scryfall.com/cards/named?fuzzy=${encodeURIComponent(name)}&lang=en`);
-    if (resEn.ok) {
-        const data = await resEn.json();
-        return data.image_uris?.normal || null;
+    if (!res.ok) return null;
+
+    const data = await res.json();
+
+    // 通常カード
+    if (data.image_uris?.normal) {
+        return data.image_uris.normal;
+    }
+
+    // 両面カードの処理
+    if (data.card_faces?.length) {
+        // card_facesの中から、nameと一致する面を探す（完全一致）
+        const face = data.card_faces.find(f => f.name === name);
+        if (face?.image_uris?.normal) {
+            return face.image_uris.normal;
+        }
+
+        // 名前が一致しない場合は表面をデフォルトとして返す
+        return data.card_faces[0].image_uris?.normal || null;
     }
 
     return null;
